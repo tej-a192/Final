@@ -24,7 +24,7 @@ const Login = () => {
         try {
             
             if(state === 'Login') {
-                const {data} = await axios.post(backendURL + '/api/user/signin', {email, password})
+                const {data} = await axios.post('https://backup-service.onrender.com/api/user/signin', {email, password})
 
                 if(data.success) {
                     setToken(data.token)
@@ -36,7 +36,7 @@ const Login = () => {
                 }
             }
             else {
-                const {data} = await axios.post(backendURL + '/api/user/signup', {name, email, password})
+                const {data} = await axios.post(`https://backup-service.onrender.com/api/user/signup`, {name, email, password})
 
                 if(data.success) {
                     toast.success("Registration successful! Login Now"); 
