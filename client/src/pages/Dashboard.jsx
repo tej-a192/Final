@@ -39,7 +39,7 @@ const Dashboard = () => {
     formData.append("interval", interval);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/upload", formData, {
+      const response = await axios.post("https://backup-service.onrender.com/api/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("File uploaded:", response.data);
@@ -81,7 +81,7 @@ const Dashboard = () => {
     
     
     try {
-      const response = await axios.post("http://localhost:8080/api/backup/schedule", formData);
+      const response = await axios.post("https://backup-service.onrender.com/api/backup/schedule", formData);
   
       console.log("File uploaded:", response.data);
       toast.success("Files uploaded successfully", {pauseOnHover: false});
