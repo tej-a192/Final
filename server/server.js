@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
-import userRouter from "./routes/userRoute.js";
+import userRouter from "./Routes/userRoute.js";
 import backupRoutes from "./Routes/backupRoutes.js"; 
 import backupStatusRoutes from "./Routes/backupStatusRoutes.js"; 
 
